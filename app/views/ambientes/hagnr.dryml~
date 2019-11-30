@@ -1,0 +1,31 @@
+<page title="#{ht 'ambiente.show.title', :default=>['Ambiente'], :name => name(:no_wrapper => true) }" without-aside >
+
+  <body: class="show-page ambiente" />
+
+  <content-header: >
+    
+   
+  </content-header:>
+
+  <content-body: >
+    <field-list fields="abecedario" />
+
+
+
+    <form method="get" action="/ambientes/#{@ambiente.id}/bor_plus_plus">
+      <input id="position" name="position" type="text" style="width:700px;"/>
+      <input type="submit">Calcular</input>
+    </form>
+
+    
+    
+
+
+
+
+
+  </content-body:>
+
+  
+
+</page>

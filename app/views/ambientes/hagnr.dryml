@@ -1,0 +1,54 @@
+<page title="#{ht 'ambiente.show.title', :default=>['Ambiente'], :name => name(:no_wrapper => true) }" without-aside >
+
+  <body: class="show-page ambiente" />
+
+  <content-header: >
+    
+   
+  </content-header:>
+
+  <content-body: >
+    <field-list fields="abecedario" />
+
+
+
+    <form method="get" action="/ambientes/#{@ambiente.id}/hagnr">
+      <input id="palabra_1" name="palabra_1" type="text" style="width:700px;"/>
+      <br/>
+      <br/>
+      <input id="palabra_2" name="palabra_2" type="text" style="width:700px;"/>
+      <input type="submit">Calcular</input>
+    </form>
+
+    
+    <% if @resp1 then %>
+        <label>
+          Posicion <%= ' "'+@pal_1 +'" : '  + @resp1.to_s %>
+        </label>
+    <% end %>
+    <% if @resp2 then %>
+        <label>
+           Posicion <%= ' "'+@pal_2 +'" : '+ @resp2.to_s %>
+        </label>
+    <% end %>
+
+    <% if @distancia then %>
+        <label>
+          Distancia: <%= @distancia.to_s%>
+        </label>
+    <% end %>
+
+   <% if @suma then %>
+        <label>
+          Suma: <%= @suma.to_s %>
+        </label>
+    <% end %>
+
+
+
+
+  </content-body:>
+
+  
+
+</page>

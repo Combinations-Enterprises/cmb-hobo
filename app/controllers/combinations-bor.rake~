@@ -1,0 +1,158 @@
+desc "Formula_2"
+task :formula_2 => :environment do
+
+  
+
+  
+
+  @nro_x = 18000
+
+  @cc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+
+  # k = cantidad_elementos
+  @k = @cc.count # 26
+  @q = @k # 26
+  @f = Array.new
+  @f.push @q
+  puts "count @cc = k:"+@k.to_s
+
+  @kn = 0
+  @k2 = 1
+
+  m = funcion_x
+  puts "@kn = "+@kn.to_s
+  puts "@m  = "+m.to_s
+
+  @cf = @f.count
+  cf = @f.count
+  cf = cf - 1
+  cf1 = cf - 1
+  cf2 = cf1 - 1
+
+  puts "cf = "+@f[cf].to_s
+  puts "cf1 = "+@f[cf1].to_s
+  puts "cf2 = "+@f[cf2].to_s
+
+
+  puts "RESTA"
+  puts "_____________"
+  puts @nro_x.to_s
+  puts @kn.to_s
+  puts @f[cf].to_s
+  puts @f[cf1].to_s
+  puts @f[cf2].to_s
+  puts "_____________"
+
+
+  funcion_exponente
+  puts "qn = "+@qn.to_s
+  puts "_______________"
+  
+  @wn = @qn
+  @position = 0
+  funcion_xqn
+  puts "primer elemento: "+ @pe.to_s
+  @primer_elemento = @pe.to_s
+  
+
+
+  @qn = 26
+  @wn = 26
+  @position = 0
+  funcion_xqn
+  puts "segunndo elemento: "+@pe.to_s
+  @segunndo_elemento = @pe.to_s
+
+
+  #falta que cuando qn es menor que q no hace mas la funcion_xql, recorre el cc hasta llegar al indice, si supera el 26 comienza de nuevo.
+
+  puts "q: "+@q.to_s
+  puts "xn "+@xn.to_s
+  ultimo_indice =  @xn % @q
+  
+  puts "mod de cc: " + ultimo_indice.to_s
+
+  indix = ultimo_indice - 1
+  @tercer_elemento = @cc[indix]
+
+  @resultado_final = @primer_elemento.to_s + @segunndo_elemento.to_s + @tercer_elemento.to_s
+  puts "resultado final: " + @resultado_final.to_s
+
+
+
+
+end
+
+
+def funcion_x
+  if @k >= @nro_x
+    puts "es mayor y sale"
+    puts @k.to_s
+    return @k
+  elsif @k < @nro_x
+    @k = @k * @q
+    @f.push @k
+    puts "Array @f = "+ @f.to_s
+    @kn = @kn + @k
+    puts "K = "+@k.to_s
+    puts "llamo de nuevo a la nueva funcion"
+    funcion_x
+  end
+end
+
+def funcion_exponente
+  puts "nro_x = "+@nro_x.to_s
+  puts "q = "+@q.to_s
+  puts "@cf = "+@cf.to_s
+
+  @n_cf = @cf - 1
+  @xn = @nro_x - ((@q) ** (@n_cf))
+
+  puts "xn = "+@xn.to_s
+
+  @qn = @nro_x - @xn
+end
+
+
+
+def funcion_xqn
+  puts "qn = "+@qn.to_s+" || xn = " + @xn.to_s
+  if @xn <= @qn
+    #pe = primer_elemento
+    @pe = @cc[@position]
+    return @pe
+  else
+    @qn = @qn + @wn
+    @position = @position + 1
+    funcion_xqn
+  end
+end
+
+
+begin  
+  (si hay 5 cf)
+  num_x - cf1+cf2+cf3+cf4 = num_x2
+  num_x2modk= ultimo elemento
+
+  num_x2 > cf4 entonces sumo cf4 hasta sea mayor que num_x2 : la cantidad
+  de veces que lo sume representa el indice. (z= 0 ; 26=0)
+
+  si es menor, es el primer elemento (a)
+
+  para el segundo elemento hago:
+
+  num_x2 > cf3  repito procedimiento hasta llegar a cf1 
+end
+
+def funcion_nueva
+
+  puts "num_x:" + @num_x.to_s
+  @num_x2= @num_x - ( @cf1 + @cf2 + @cf2 )
+
+  if @num_x2 > @cf2 
+    @letra1= "a"
+
+  elsif 
+    @num_x2 < @cf2
+    @cf2+@cf2
+    

@@ -1,0 +1,32 @@
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content: >
+    <header class="content-header hero-unit">
+      <div class="front_nav">
+        <div class="front_title">COMBINATIONS</div>
+      </div>
+      <section class="welcome-message">       
+        <% if User.count == 0 -%>
+          <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
+          <form with="&this || User.new" without-cancel>
+            <field-list: fields="name, email_address, password, password_confirmation"/>
+            <submit: label="Register Administrator"/>
+          </form>
+        <% end -%>
+      </section>
+    </header>
+    <section class="content-body">
+    </section>
+    <a href="front/front_combinations">
+      <div class="button">
+        <div class="text_button">
+          GENERATE COMBINATIONS
+        </div>
+      </div>
+    </a>
+    
+  </content:>
+
+</page>

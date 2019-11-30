@@ -1,0 +1,32 @@
+<page title="#{ht 'ambiente.show.title', :default=>['Ambiente'], :name => name(:no_wrapper => true) }" without-aside >
+
+  <body: class="show-page ambiente" />
+
+  <content-header: >
+    
+   
+  </content-header:>
+
+  <content-body: >
+    
+    
+ <form method="get" action="/ambientes/#{@ambiente.id}/babel">
+      <input id="position" name="position" type="text"/>
+      <input type="submit">Calcular</input>
+    </form>
+
+    
+    <% if @combinacion_final then %>
+        <label>
+          <%= @combinacion_final %>
+        </label>
+    <% end %>
+
+
+
+
+  </content-body:>
+
+  
+
+</page>

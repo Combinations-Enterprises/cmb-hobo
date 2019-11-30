@@ -1,0 +1,46 @@
+<page title="#{ht 'ambiente.show.title', :default=>['Ambiente'], :name => name(:no_wrapper => true) }" without-aside >
+
+  <body: class="show-page ambiente" />
+
+  <content-header: >
+    <h2 class="heading">
+      <ht key="ambiente.show.heading" name="#{name(:no_wrapper => true)}">
+        Ambiente <name/>
+      </ht>
+    </h2>
+
+    <record-flags fields="" />
+
+    <a:user class="creator-link"/>
+
+    <a action="edit" if="&can_edit?" class="edit-link">
+      <ht key="ambiente.actions.edit" name="#{name(:no_wrapper => true)}">
+        Edit Ambiente
+      </ht>
+    </a>
+  </content-header:>
+
+  <content-body: >
+    <view:description class="description" />
+    <field-list fields="abecedario, cant_combinations" />
+
+
+    <a href="/ambientes/#{@ambiente.id}/bor_plus_plus">
+      BOR PLUS PLUS
+    </a>
+<br/>
+    
+<a href="/ambientes/#{@ambiente.id}/babel">
+      Babel
+    </a>
+    
+<a href="/ambientes/#{@ambiente.id}/hagnr">
+      Hagnr
+    </a>
+    
+
+  </content-body:>
+
+  
+
+</page>

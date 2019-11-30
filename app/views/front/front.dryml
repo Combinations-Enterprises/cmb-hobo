@@ -1,0 +1,13 @@
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content: >
+    <header class="content-header hero-unit">  
+    </header>
+    <section class="content-body">
+    </section>
+  </content:>
+
+</page>
+

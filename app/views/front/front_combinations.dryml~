@@ -1,0 +1,17 @@
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content: >
+    <header class="content-header hero-unit">
+      <div class="front_nav">
+        <div class="front_title">COMBINATIONS</div>
+      </div>
+      
+    </header>
+    <section class="content-body">
+    </section>
+  </content:>
+
+</page>
+

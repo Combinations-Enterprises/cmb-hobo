@@ -1,0 +1,31 @@
+<page title="#{ht 'ambiente.index.title', :default=>[model.model_name.human(:count=>100)] }">
+  <body: class="index-page ambiente" />
+
+  <content-header: >
+    <h2 class="heading">
+      <ht key="ambiente.index.heading">
+        <model-name-human model="&model"/>
+      </ht>
+    </h2>
+
+    <p class="count" if>
+      <ht key="ambiente.collection.count" count="&collection_count">
+        <count summary/>
+      </ht>
+    </p>
+  </content-header:>
+
+  <content-body: >
+    <a action="new" to="&model" class="new-link">
+      <ht key="ambiente.actions.new">New Ambiente</ht>
+    </a>
+
+    <page-nav class="top-page-nav"/>
+
+    <collection />
+
+    <page-nav class="bottom-page-nav"/>
+
+hola
+  </content-body:>
+</page>

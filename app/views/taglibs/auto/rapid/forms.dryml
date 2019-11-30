@@ -1,0 +1,120 @@
+<!-- AUTOMATICALLY GENERATED FILE - DO NOT EDIT -->
+
+
+<def tag="form" for="AmbienteAutomatico">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="text, ambiente" param/>
+    <div param="actions">
+      <submit label="#{ht 'ambiente_automatico.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Ambiente">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="abecedario, description, cant_combinations, combinacion_final, posicion_final_1, posicion_final_2, user" param/>
+    <div param="actions">
+      <submit label="#{ht 'ambiente.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Borpp">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="result, description" param/>
+    <div param="actions">
+      <submit label="#{ht 'borpp.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Combination">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="position, comb, description, ambiente" param/>
+    <div param="actions">
+      <submit label="#{ht 'combination.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Document">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="description" param/>
+    <div param="actions">
+      <submit label="#{ht 'document.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Hagnr">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="result" param/>
+    <div param="actions">
+      <submit label="#{ht 'hagnr.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="Limit">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="result_final, array_result, description" param/>
+    <div param="actions">
+      <submit label="#{ht 'limit.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+
+
+<def tag="form" for="User">
+  <form merge param="default">
+    <error-messages param/>
+    <field-list fields="name, email_address, administrator, state" param/>
+    <div param="actions">
+      <submit label="#{ht 'user.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+<def tag="signup-form" polymorphic/>
+<def tag="signup-form" for="User">
+  <form lifecycle="signup" merge param="default">
+    <error-messages param/>
+    <field-list fields="name, email_address, password, password_confirmation" param/>
+    <div param="actions">
+      <submit label="#{ht 'user.actions.signup', :default=>['Signup']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
+<def tag="reset-password-form" polymorphic/>
+<def tag="reset-password-form" for="User">
+  <form lifecycle="reset_password" merge param="default">
+    <error-messages param/>
+    <input type="hidden" name="key" value="&this.lifecycle.provided_key" if="&this.lifecycle.provided_key"/>
+    <field-list fields="password, password_confirmation" param/>
+    <div param="actions">
+      <submit label="#{t 'activerecord.attributes.user.lifecycle.transitions.reset_password', :default=>['Reset Password']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+

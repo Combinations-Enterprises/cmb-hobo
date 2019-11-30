@@ -1,0 +1,21 @@
+<page  title="#{ht 'ambiente.new.title', :default=>[' New Ambiente'] }">
+  <body: class="new-page ambiente" />
+
+  <content-header: >
+    <h2 class="heading">
+      <ht key="ambiente.new.heading">
+        New Ambiente 
+      </ht>
+    </h2>
+  </content-header:>
+
+  <content-body: >
+    <form >
+      <field-list fields="abecedario, description" />
+      <div class="actions">
+        <submit: label="#{ht 'ambiente.actions.create', :default=>['Create Ambiente']}"/>
+      </div>
+
+    </form>
+  </content-body:>
+</page>

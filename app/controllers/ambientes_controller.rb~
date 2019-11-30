@@ -1,0 +1,37 @@
+class AmbientesController < ApplicationController
+
+
+
+  hobo_model_controller
+
+  auto_actions :all
+
+  show_action :bor_plus_plus
+
+  def bor_plus_plus
+
+    hobo_show do
+      if params[:position] then
+
+        @nro_posicion = params[:position]
+        #@id_ambiente  = Ambiente.find(@ambiente.id) 
+        @id_ambiente = params[:id]
+        @posicion_final = system("rake formula_2[@nro_posicion,@id_ambiente]")
+	puts "posicion final"+@posicion_final.to_s
+  
+      end
+	
+      
+
+    end
+  end
+
+
+
+
+
+
+
+
+end
+
